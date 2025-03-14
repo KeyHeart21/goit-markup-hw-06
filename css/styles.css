@@ -405,19 +405,12 @@ button {
     font-size: 36px;
     line-height: 1.11111;
     letter-spacing: 0.02em;
-    text-align: center;
+
     color: #2e2f42;
 }
 
 @media screen and (min-width: 768px) {
-    .benefits-titles {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.11111;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
-
-    }
+    .benefits-titles {}
 
 }
 
@@ -439,7 +432,7 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 72px;
+    row-gap: 72px;
 }
 
 @media screen and (min-width: 768px) {
@@ -447,7 +440,8 @@ button {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 72px;
 
     }
 }
@@ -467,12 +461,15 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
+    width: 288px;
 }
 
 @media screen and (min-width:768px) {
     .benefits-list-item {
         width: calc((100% - 24px) / 2);
-        gap: 8px;
+
+        align-items: start;
     }
 
 }
@@ -480,7 +477,7 @@ button {
 @media screen and (min-width: 1158px) {
     .benefits-list-item {
         width: calc((100% - 72px) / 4);
-        gap: 8px;
+
         align-items: start;
 
     }
@@ -503,18 +500,15 @@ button {
     letter-spacing: 0.02em;
     color: #434455;
     width: 288px;
-    padding: 0 16px;
-    margin: auto;
+
+
 }
 
 @media screen and (min-width: 768px) {
     .benefits-text {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
+
         width: 356px;
+
     }
 }
 
@@ -526,15 +520,25 @@ button {
         letter-spacing: 0.02em;
         color: #434455;
         width: 264px;
-        padding: 0;
+
     }
 }
 
 .people {
     background-color: #f4f4fd;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
+
+@media screen and (min-width: 1158px) {
+    .people {
+        background-color: #f4f4fd;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+}
+
 
 .people-title {
     font-weight: 700;
@@ -552,7 +556,32 @@ button {
 .people-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    justify-content: center;
+    row-gap: 72px;
+    column-gap: 152px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+@media screen and (min-width: 768px) {
+    .people-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 64px;
+        column-gap: 24px;
+
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 1158px) {
+        .people-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding: 0;
+        }
+
+    }
 
 }
 
@@ -579,10 +608,25 @@ button {
 
 .people-list-item {
     background-color: #FFFFFF;
-    width: calc((100% - 24px * 3) / 4);
+    width: 264px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .people-list-item {
+        width: 264px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .people-list-item {
+        width: calc((100% - 24px * 3) / 4);
+    }
 
 }
 
