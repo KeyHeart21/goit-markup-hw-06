@@ -190,8 +190,7 @@ ul {
 @media screen and (min-width: 767px) {
     .header-adr-list {
         display: block;
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding: 0;
         gap: 40px;
     }
 
@@ -216,13 +215,15 @@ ul {
     padding-top: 24px;
     padding-bottom: 24px;
     position: relative;
-    color: #404bbf;
+
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
+
+
 .header-list-item {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: #404bbf;
+
 }
 
 .header-list-item :hover,
@@ -248,6 +249,28 @@ ul {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+    .header-adr-list-link {
+        padding: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #434455;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .header-adr-list-link {
+
+
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+
+    }
+}
+
 .header-adr-list-item :hover,
 .header-adr-list-item :focus {
     color: #404bbf;
@@ -258,7 +281,7 @@ ul {
     margin: auto;
     padding-top: 72px;
     padding-bottom: 72px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image.jpg );
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobilehero-image.jpg );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -266,7 +289,39 @@ ul {
 
 }
 
+@media screen and (min-width: 768px) {
+    .hero {
+
+
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablethero-image.jpg);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .hero {
+
+
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image.jpg);
+    }
+}
+
 @media screen and (min-width: 320px) and (min-resolution: 192dpi) {
+    .hero {
+
+
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobilehero-image2x.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .hero {
+
+
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablethero-image2x.jpg);
+    }
+}
+
+@media screen and (min-width: 1156px) and (min-resolution: 192dpi) {
     .hero {
 
 
@@ -316,7 +371,7 @@ ul {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-    max-width: 496px;
+    max-width: 216px;
     margin: auto;
     margin-bottom: 72px;
 }
@@ -493,7 +548,7 @@ button {
 }
 
 
-@media screen and (max-width: 1158px) {
+@media screen and (max-width: 1157px) {
 
     .benefits-icon,
     .upper-section {
@@ -760,7 +815,7 @@ button {
 
 @media screen and (min-width: 768px) {
     .portfolio-list-item {
-        width: calc((100% - 72px) / 2);
+        width: calc((100% - 24px) / 2);
 
 
     }
@@ -857,7 +912,7 @@ button {
     display: flex;
     gap: 16px;
     justify-content: center;
-    margin-bottom: 72px;
+
 }
 
 .footer-logo {
@@ -916,7 +971,7 @@ button {
 .media-container {
 
     align-items: baseline;
-
+    margin-bottom: 72px;
 }
 
 .logo-container {
@@ -1067,7 +1122,7 @@ button {
     }
 
     .footer-text {
-        margin-bottom: 0;
+        margin-bottom: 72px;
         width: 264px;
         margin-right: 24px;
     }
@@ -1075,6 +1130,7 @@ button {
     .footer-form {
         gap: 24px;
         display: flex;
+        max-height: 40px;
     }
 
     .footer-media-p {
@@ -1086,6 +1142,10 @@ button {
 
         display: block;
 
+    }
+
+    .media-container {
+        margin-bottom: 0;
     }
 
 }
@@ -1363,7 +1423,7 @@ button {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -1423,7 +1483,8 @@ button {
     flex-direction: column;
     gap: 24px;
     height: 72px;
-
+    font-style: normal;
+    margin-bottom: 48px;
 
 }
 
