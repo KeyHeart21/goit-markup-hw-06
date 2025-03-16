@@ -76,7 +76,7 @@ img {
 }
 
 .container {
-    min-width: 320px;
+    max-width: 320px;
     padding-left: 16px;
     padding-right: 16px;
 
@@ -86,7 +86,7 @@ img {
 
 @media screen and (min-width: 768px) {
     .container {
-        min-width: 768px;
+        max-width: 768px;
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -279,13 +279,13 @@ ul {
 
         padding-top: 112px;
         padding-bottom: 112px;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image@2x.jpg);
+
     }
 }
 
 @media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
     .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image@2x.jpg);
+
         padding-top: 188px;
         padding-bottom: 188px;
     }
@@ -323,12 +323,11 @@ ul {
 
 @media screen and (min-width: 768px) {
     .hero-text {
-        font-weight: 700;
+
         font-size: 56px;
         line-height: 1.07;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #fff;
+
+
         margin-bottom: 36px;
     }
 
@@ -336,12 +335,7 @@ ul {
 
 @media screen and (min-width: 1158px) {
     .hero-text {
-        font-weight: 700;
-        font-size: 56px;
-        line-height: 1.07;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #fff;
+
         margin-bottom: 48px;
     }
 
@@ -375,6 +369,10 @@ ul {
 
 button {
     cursor: pointer;
+}
+
+.btn-mob-icon {
+    margin: auto;
 }
 
 .visually-hidden {
@@ -424,10 +422,6 @@ button {
     color: #2e2f42;
 }
 
-@media screen and (min-width: 768px) {
-    .benefits-titles {}
-
-}
 
 @media screen and (min-width: 1158px) {
     .benefits-titles {
@@ -452,7 +446,7 @@ button {
 
 @media screen and (min-width: 768px) {
     .benefits-list {
-        display: flex;
+
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 24px;
@@ -463,7 +457,7 @@ button {
 
 @media screen and (min-width: 1158px) {
     .benefits-list {
-        display: flex;
+
         gap: 24px;
         justify-content: center;
         flex-direction: row;
@@ -493,7 +487,7 @@ button {
     .benefits-list-item {
         width: calc((100% - 72px) / 4);
 
-        align-items: start;
+
 
     }
 }
@@ -530,10 +524,7 @@ button {
 @media screen and (min-width: 1158px) {
     .benefits-text {
         font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
+
         width: 264px;
 
     }
@@ -547,7 +538,7 @@ button {
 
 @media screen and (min-width: 1158px) {
     .people {
-        background-color: #f4f4fd;
+
         padding-top: 120px;
         padding-bottom: 120px;
     }
@@ -569,13 +560,20 @@ button {
 
 
 .people-list {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    justify-content: center;
+    padding-right: 12px;
+    padding-left: 12px;
+
+    grid-template-columns: repeat(1, 1fr);
     row-gap: 72px;
-    column-gap: 152px;
-    padding-left: 28px;
-    padding-right: 28px;
+    justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+    .people-list li:nth-child(odd) {
+        justify-self: end;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -692,8 +690,16 @@ button {
 }
 
 .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media screen and (min-width: 1158px) {
+    .portfolio {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
 }
 
 .portfolio-title {
@@ -716,18 +722,60 @@ button {
 
 .portfolio-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 48px 24px;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 48px;
+}
 
+
+
+@media screen and (min-width: 768px) {
+    .portfolio-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px
+    }
+
+}
+
+@media screen and (min-width: 1158px) {
+    .portfolio-list {
+        row-gap: 48px;
+
+    }
 }
 
 .portfolio-list-item {
-    width: calc((100% - 48px) / 3);
 
-    width: 360px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
 
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media screen and (min-width: 768px) {
+    .portfolio-list-item {
+        width: calc((100% - 72px) / 2);
+
+
+    }
+
+}
+
+@media screen and (min-width: 1158px) {
+    .portfolio-list-item {
+        width: calc((100% - 48px) / 3);
+        box-shadow: none;
+    }
+
+}
+
+
 
 
 .portfolio .container {
@@ -781,9 +829,13 @@ button {
 
 }
 
-.portfolio-list-item:hover {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    background: #fff;
+
+@media screen and (min-width: 1158px) {
+    .portfolio-list-item:hover {
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+        background: #fff;
+    }
+
 }
 
 .portfolio-list-text {
@@ -797,9 +849,15 @@ button {
 
 .footer {
     background: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 0;
 
+}
 
+.footer-icon-list {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 72px;
 }
 
 .footer-logo {
@@ -812,7 +870,8 @@ button {
     color: #4d5ae5;
     display: inline-block;
     margin-bottom: 16px;
-
+    display: flex;
+    justify-content: center;
 }
 
 .footer-logo-item {
@@ -833,17 +892,26 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    margin-bottom: 72px;
 
+}
 
+.footer-form {
+    gap: 24px;
+    display: block;
+}
 
+.footer-sub {
 
+    margin-left: 0;
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
 
+    flex-wrap: wrap;
+    align-items: center;
 }
+
 
 .media-container {
 
@@ -865,25 +933,15 @@ button {
     letter-spacing: 0.02em;
     color: #fff;
     margin-bottom: 16px;
-
-}
-
-
-.footer-icon-list {
-    display: flex;
-    gap: 16px;
     justify-content: center;
 }
 
-.footer-sub {
 
-    margin-left: 80px;
-}
 
-.footer-form {
-    gap: 24px;
-    display: flex;
-}
+
+
+
+
 
 .footer-label {
 
@@ -894,14 +952,15 @@ button {
     letter-spacing: 0.02em;
     color: #ffffff;
     margin-bottom: 16px;
-
+    display: flex;
+    justify-content: center;
 }
 
 .footer-input {
     display: block;
     border: 1px solid #ffffff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     background-color: transparent;
     padding-left: 16px;
@@ -911,6 +970,7 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: #ffffff;
 
+
 }
 
 .footer-input::placeholder {
@@ -919,6 +979,11 @@ button {
     line-height: 2;
     letter-spacing: 0.04em;
     color: #fff;
+}
+
+.fototer-button-container {
+    display: flex;
+    justify-content: center;
 }
 
 .footer-button {
@@ -973,6 +1038,104 @@ button {
     background-color: #31d0aa;
 }
 
+
+@media screen and (min-width: 768px) {
+    .footer-input {
+        display: block;
+
+
+        width: 264px;
+
+
+
+    }
+
+    .footer-label {
+
+
+
+        display: flex;
+        justify-content: start;
+    }
+
+
+    .footer-container {
+        display: flex;
+        align-items: baseline;
+        width: 528px;
+
+    }
+
+    .footer-text {
+        margin-bottom: 0;
+        width: 264px;
+        margin-right: 24px;
+    }
+
+    .footer-form {
+        gap: 24px;
+        display: flex;
+    }
+
+    .footer-media-p {
+        display: flex;
+        justify-content: start;
+    }
+
+    .footer-logo {
+
+        display: block;
+
+    }
+
+}
+
+@media screen and (min-width: 1158px) {
+    .footer-label {
+        display: flex;
+        justify-content: start;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        width: 1158px;
+
+    }
+
+    .footer-sub {
+
+        margin-left: 80px;
+    }
+
+    .footer-form {
+        gap: 24px;
+        display: flex;
+    }
+
+    .footer {
+        background: #2e2f42;
+        padding: 100px 0;
+
+    }
+
+    .footer-text {
+
+        margin-right: 120px;
+        margin-bottom: 0;
+
+    }
+
+
+
+    .footer-icon-list {
+        margin-bottom: 0px;
+    }
+
+
+}
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -995,15 +1158,15 @@ button {
 }
 
 .modal {
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
     background-color: #fcfcfc;
     border-radius: 4px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1143,15 +1306,10 @@ button {
     fill: transparent;
     background-color: transparent;
     margin-right: 8px;
+    flex-shrink: 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .custom-checkbox-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
 
 .modal-checkbox:checked+.modal-checkbox-label .custom-checkbox {
     background-color: #404bbf;
@@ -1167,8 +1325,13 @@ button {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    display: flex;
+    align-items: center;
+
 
 }
+
+.custom-checkbox-text {}
 
 .modal-link {
     color: #4d5ae5;
@@ -1178,9 +1341,23 @@ button {
     margin-bottom: 16px;
 }
 
+
+
 .send-btn {
     margin-top: 24px;
 }
+
+@media screen and (min-width: 768px) {
+    .modal {
+        width: 408px;
+        min-height: 584px;
+
+        padding: 72px 24px 24px 24px;
+
+    }
+}
+
+
 
 .mobile-menu {
     position: fixed;
@@ -1204,12 +1381,7 @@ button {
     padding-bottom: 40px;
 }
 
-@media screen and (min-width: 768px) {
-    .mobile-menu {
-        display: none;
-    }
 
-}
 
 .mobile-menu.is-open {
     opacity: 1;
