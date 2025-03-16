@@ -189,10 +189,12 @@ ul {
 
 @media screen and (min-width: 767px) {
     .header-adr-list {
-        display: block;
+        display: flex;
+        flex-direction: column;
         padding: 0;
-        gap: 40px;
+        row-gap: 12px;
     }
+
 
 }
 
@@ -382,7 +384,7 @@ ul {
         font-size: 56px;
         line-height: 1.07;
 
-
+        max-width: 496px;
         margin-bottom: 36px;
     }
 
@@ -947,8 +949,12 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    margin-bottom: 72px;
 
+
+}
+
+.footer-logo-container {
+    margin-bottom: 72px;
 }
 
 .footer-form {
